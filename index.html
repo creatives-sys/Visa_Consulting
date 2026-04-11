@@ -38,6 +38,57 @@
       <link rel="stylesheet" href="css/responsive.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
 
+	  <style>
+		.whatsapp-float {
+  position: fixed;
+  bottom: 20px;          /* Adjusted for mobile view */
+  right: 20px;           /* Adjusted for mobile view */
+  z-index: 100;
+  /* background-color: #25D366; 
+  padding: 10px; */
+ 
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.whatsapp-float img {
+  width: 60px;              /* Default size for larger screens */
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* .whatsapp-float:hover {
+  transform: scale(1.1);
+} */
+
+/* 📱 Mobile View (screens less than 768px wide) */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 15px;         /* Slightly higher for mobile */
+    right: 15px;          /* Slightly inward for mobile */
+    padding: 5px; 
+    position: fixed;
+    bottom: 60px;
+    right: 10px;        /* Less padding for smaller screens */
+  }
+
+  .whatsapp-float img {
+    width: 60px;          /* Smaller icon for mobile */
+    height: 60px;
+  }
+}
+
+/* 🖥️ Large Screens (screens greater than 1200px wide) */
+@media (min-width: 1200px) {
+  .whatsapp-float img {
+    width: 80px;         /* Larger icon for big screens */
+    height: 80px;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+  }
+}
+	  </style>
    </head>
    <body>
 
@@ -744,7 +795,7 @@
 										<div class="pbmit-heading-title">
 											<h3>Founded</h3>
 										</div>
-										<svg width="250" height="250"><g transform="translate(125,125)"><path d="M4.898587196589413e-15,-80A80,80 0 0,1 4.898587196589413e-15,80L4.592425496802574e-15,75A75,75 0 0,0 4.592425496802574e-15,-75Z" transform="rotate(-90)" style="fill: rgb(255, 255, 255);"></path><path d="M4.898587196589413e-15,-80A80,80 0 0,1 64.7213595499958,47.022820183397855L60.67627457812106,44.083893921935484A75,75 0 0,0 4.592425496802574e-15,-75Z" transform="rotate(-90)" style="fill: rgb(0, 0, 0);"></path><text class="middleText" text-anchor="middle" dy="0" dx="5">2025</text></g></svg>
+										<svg width="250" height="250"><g transform="translate(125,125)"><path d="M4.898587196589413e-15,-80A80,80 0 0,1 4.898587196589413e-15,80L4.592425496802574e-15,75A75,75 0 0,0 4.592425496802574e-15,-75Z" transform="rotate(-90)" style="fill: rgb(255, 255, 255);"></path><path d="M4.898587196589413e-15,-80A80,80 0 0,1 64.7213595499958,47.022820183397855L60.67627457812106,44.083893921935484A75,75 0 0,0 4.592425496802574e-15,-75Z" transform="rotate(-90)" style="fill: rgb(0, 0, 0);"></path><text class="middleText" text-anchor="middle" dy="0" dx="5">2026</text></g></svg>
 									</div>
 									<div class="pbmit-ihbox-style-wrap">
 										<div class="pbmit-ihbox-style-12">
@@ -1193,7 +1244,7 @@
 												</div>
 												<div class="pbmit-ihbox-box-wrapper">
 													<div class="pbmit-element-subtitle">
-														Need Help? Talk to an experts
+														Talk to our experts
 													</div>
 													<h2 class="pbmit-element-title">
 														<a href="tel:+91 9037027473">
@@ -1617,7 +1668,7 @@
 									<h3 class="pbmit-title mb-3">Send a message to staff</h3>
 								</div>
 								<p class="comment-note">Your email address will not be published. Required fields are marked *</p>
-								<form class="contact-form" method="post" id="contact-form" action="https://Global Vista International-demo.pbminfotech.com/html-demo/send-dummy.php">
+								<form class="contact-form" method="post" id="contact-form" action="send-mail.php">
 									<div class="row">
 										<div class="col-md-6">
 											<input type="text" class="form-control" placeholder="Your Name" name="name" required>
@@ -1636,10 +1687,7 @@
 										</div>
 										<div class="col-md-12">
 											<div class="form-check">
-												<!-- <label class="form-check-label">
-													<input class="form-check-input" type="checkbox">
-													Save my name, email, and website in this browser for the next time I comment.
-												</label> -->
+												
 											</div>
 										</div>
 									</div>
@@ -1664,7 +1712,9 @@
 				</div>
 			</section>
 			<!-- Contact Form End -->
-
+       <a href="https://wa.me/+919037027473" target="_blank" class="whatsapp-float">
+        <img src="images/whtsp.png" alt="WhatsApp">
+       </a>
 			<!-- About Us Start -->
 			<section class="about-us-bg pbmit-bg-color-global" style="background-image: url(images/homepage/a1Kgt.jpg);">
 				<div class="container">
@@ -1899,8 +1949,7 @@
 
 <ul class="menu">
 <li><a href="about-us.html">About Us</a></li>
-<li><a href="our-process.html">Our Process</a></li>
-<li><a href="testimonials.html">Student Testimonials</a></li>
+<li><a href="about-us.html">Our Process</a></li>
 <li><a href="faq.html">FAQ</a></li>
 <li><a href="contact-us.html">Book Consultation</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
@@ -1920,9 +1969,9 @@
 <div class="row">
 
 <div class="pbmit-footer-box col-md-4 pbmit-footer-box-1">
-<a href="tel:+91XXXXXXXXXX">
+<a href="tel:+91 9037027473">
 <div class="pbmit-footer-content-wrap">
-<span class="pbmit-footer-box-title">Need Help? Talk to Our Counsellor</span>
+<span class="pbmit-footer-box-title">Talk to Our Experts</span>
 <span class="pbmit-footer-box-content">+91 9037027473</span>
 </div>
 </a>
@@ -1940,7 +1989,7 @@
 <div class="pbmit-footer-box col-md-4 pbmit-footer-box-3">
 <div class="pbmit-footer-content-wrap">
 <span class="pbmit-footer-box-title">Our Locations</span>
-<span class="pbmit-footer-box-content">Kollam | Kottayam | Kerala</span>
+<span class="pbmit-footer-box-content">Kochi | Kottayam</span>
 </div>
 </div>
 
@@ -1988,7 +2037,8 @@
 
 <div class="col-md-4 text-end">
 <div class="pbmit-footer-copyright-text-area">
-© 2026 Global Vista International. All Rights Reserved. </div> <br>
+© 2026 Global Vista International. All Rights Reserved. <br>Designed & Developed by <a href="https://www.ornabyte.com/">Ornabyte</a> </div> <br>
+
 <!-- Designed & Developed by Ornabyte -->
 </div>
 </div>
@@ -1996,7 +2046,7 @@
 </div>
 </div>
 </div>
-</div>
+
 
 </footer>
         <!-- footer End -->
