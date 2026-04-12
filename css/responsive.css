@@ -1897,10 +1897,12 @@ body {
 		border-radius: 25px;
 	}
 	.faq-three-left-box .ihbox-style-area{
-		right: -130px;
+		/* right: -130px; modified neeth 12/4/26*/
+		right: 80px;
 	}
 	.faq-three-left-box .ihbox-style-area .pbmit-ihbox-box{
-		padding: 25px 50px 20px 45px;
+		/* padding: 25px 50px 20px 45px; */
+		padding: 25px 20px 20px 20px ;
 	}
 	.faq-three-right-box{
 		padding: 60px 30px;

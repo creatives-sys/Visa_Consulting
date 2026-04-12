@@ -841,11 +841,18 @@ body {
 	margin-right: 4px;
 	position: relative;
 }
-.faq-three-left-box .ihbox-style-area{
+/* .faq-three-left-box .ihbox-style-area{
 	position: absolute;
 	right: -150px;
 	top: 45%;
 	transform: rotateZ(-90deg);
+} */  /* old code 844- 849 neethu modified 12/4/26*/
+
+.faq-three-left-box .ihbox-style-area {
+    position: absolute;
+    right: 200px;
+    bottom: 0%;
+    transform: rotateZ(0deg);
 }
 .faq-three-left-box .ihbox-style-area::before,
 .faq-three-left-box .ihbox-style-area::after{
