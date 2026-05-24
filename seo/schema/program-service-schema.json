@@ -1,0 +1,42 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.globalvista.io/#service-ausbildung",
+      "name": "Germany Ausbildung Placement Program",
+      "provider": {
+        "@id": "https://www.globalvista.io/#organization"
+      },
+      "serviceType": "Vocational Training Placement",
+      "description": "End-to-end placement services for international students in paid German Ausbildung (dual vocational training) programs across nursing, IT, automotive, and hospitality sectors.",
+      "areaServed": "IN",
+      "offers": {
+        "@type": "Offer",
+        "description": "Comprehensive Ausbildung placement, visa processing, on-ground support, and intensive German B1/B2 preparation."
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.globalvista.io/#service-language",
+      "name": "German Language Course Admissions",
+      "provider": {
+        "@id": "https://www.globalvista.io/#organization"
+      },
+      "serviceType": "Language Studies Admission",
+      "description": "Admission services for intensive German language learning programs directly in partner institutes in Germany, including student language course visa support.",
+      "areaServed": "IN"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.globalvista.io/#service-university",
+      "name": "European University Application Handling",
+      "provider": {
+        "@id": "https://www.globalvista.io/#organization"
+      },
+      "serviceType": "Higher Education Counselling",
+      "description": "Expert admission handling, course selection, and university application support for public tuition-free institutions in Germany and affordable public universities in Austria.",
+      "areaServed": "IN"
+    }
+  ]
+}

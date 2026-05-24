@@ -1,0 +1,51 @@
+# ==================================================
+#           ROBOTS.TXT FOR GLOBALVISTA
+# ==================================================
+# Target Domain: https://www.globalvista.io
+
+# 1. Allow traditional search engine crawlers
+User-agent: *
+Allow: /
+
+# Prevent crawl of duplicate demo and historical templates
+Disallow: /index-backup.html
+Disallow: /index-2.html
+Disallow: /index3.html
+Disallow: /homepage-2.html
+Disallow: /homepage-3.html
+Disallow: /services-backup.html
+Disallow: /blog1 copy.html
+
+# 2. Explicitly allow generative AI and answer engine crawlers (GEO / AEO Optimization)
+# Allow Perplexity AI Bot
+User-agent: PerplexityBot
+Allow: /
+Allow: /seo/content-briefs/
+Allow: /allblogs.html
+Allow: /blog1.html
+Allow: /blog2.html
+Allow: /blog3.html
+Allow: /blog4.html
+
+# Allow OpenAI ChatGPT Bot
+User-agent: GPTBot
+Allow: /
+Allow: /seo/content-briefs/
+Allow: /allblogs.html
+Allow: /blog1.html
+Allow: /blog2.html
+Allow: /blog3.html
+Allow: /blog4.html
+
+# Allow Anthropic Claude Bot
+User-agent: ClaudeBot
+Allow: /
+Allow: /seo/content-briefs/
+Allow: /allblogs.html
+Allow: /blog1.html
+Allow: /blog2.html
+Allow: /blog3.html
+Allow: /blog4.html
+
+# 3. Reference Sitemap Location
+Sitemap: https://www.globalvista.io/sitemap.xml
