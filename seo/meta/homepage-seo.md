@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://www.globalvista.io/" />
 <meta property="og:title" content="Best Abroad Education Consultants in Kochi & Kerala | Globalvista" />
 <meta property="og:description" content="Globalvista International LLP is the best abroad study consultancy in Kerala & Kochi. Specializing in Germany Ausbildung, free education, & student visas." />
-<meta property="og:image" content="https://www.globalvista.io/images/Globalvista%20GV%20Logo.svg" />
+<meta property="og:image" content="https://www.globalvista.io/images/Globalvista GV Logo.svg" />
 <meta property="og:site_name" content="Globalvista International" />
 
 <!-- Twitter Card Tags -->
@@ -30,5 +30,5 @@
 <meta name="twitter:url" content="https://www.globalvista.io/" />
 <meta name="twitter:title" content="Best Abroad Education Consultants in Kochi & Kerala | Globalvista" />
 <meta name="twitter:description" content="Globalvista International LLP is the best abroad study consultancy in Kerala & Kochi. Specializing in Germany Ausbildung, free education, & student visas." />
-<meta name="twitter:image" content="https://www.globalvista.io/images/Globalvista%20GV%20Logo.svg" />
+<meta name="twitter:image" content="https://www.globalvista.io/images/Globalvista GV Logo.svg" />
 ```

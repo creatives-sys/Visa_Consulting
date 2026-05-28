@@ -437,7 +437,7 @@
 .pbmit-ihbox-style-2 .pbmit-ihbox-icon-type-text{
 	font-size: 24px;
 }
-.pbmit-ihbox-style-2 .pbmit-vizaa-icon{
+.pbmit-ihbox-style-2 .pbmit-Global Vista International-icon{
 	margin-top: 5px;
 	display: inline-block;
 }
@@ -1044,11 +1044,11 @@
 }
 .pbmit-ihbox-style-8 .pbmit-element-subtitle a,
 .pbmit-ihbox-style-8 .pbmit-element-title a{
-	color: var(--pbmit-vizaa-blackish-color);
+	color: var(--pbmit-Global Vista International-blackish-color);
 }
 .pbmit-ihbox-style-8 .pbmit-element-subtitle a:hover,
 .pbmit-ihbox-style-8 .pbmit-element-title a:hover{
-	color: var(--pbmit-vizaa-global-color);
+	color: var(--pbmit-Global Vista International-global-color);
 }
 /** Style 9 **/
 .pbmit-ihbox-style-9,
