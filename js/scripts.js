@@ -391,7 +391,7 @@
 			var url = form.attr('action') || "send-mail.php";
 			
 			// Centrally replace placeholder ID with configured ID if needed
-			if (url.indexOf("YOUR_FORM_ID") !== -1 && defaultFormspreeId !== "YOUR_FORM_ID") {
+			if (url.indexOf("xpqnbpqj") !== -1 && defaultFormspreeId !== "xpqnbpqj") {
 				url = "https://formspree.io/f/" + defaultFormspreeId;
 			}
 
