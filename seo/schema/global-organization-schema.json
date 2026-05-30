@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.globalvista.io/#organization",
+      "name": "Globalvista International LLP",
+      "url": "https://www.globalvista.io",
+      "logo": "https://www.globalvista.io/images/logo.png",
+      "telephone": "+91-9037027473",
+      "email": "connect@globalvista.io",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61574434762918",
+        "https://www.instagram.com/global.vista.international/",
+        "https://www.linkedin.com/in/chandapillai-m-abraham-647093174"
+      ],
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Chandapillai M. Abraham",
+          "jobTitle": "Co-Founder - Finance, Marketing & Sales"
+        },
+        {
+          "@type": "Person",
+          "name": "Ajay Abraham",
+          "jobTitle": "Co-Founder - Strategy & Partnerships"
+        },
+        {
+          "@type": "Person",
+          "name": "Joyal Mathew",
+          "jobTitle": "Co-Founder - Core Admissions Operations"
+        }
+      ],
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "Manuel Mathew",
+          "jobTitle": "Head of Sales & Partnerships"
+        },
+        {
+          "@type": "Person",
+          "name": "Ruby R Roy",
+          "jobTitle": "Corporate Office Administrator"
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.globalvista.io/#localbusiness-kochi",
+      "name": "Globalvista International Corporate Office",
+      "image": "https://www.globalvista.io/images/homepage/best-study-abroad-consultants-kochi-global-vista.webp",
+      "telephone": "+91-9037027473",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kochi Corporate Suite, Ernakulam",
+        "addressLocality": "Kochi",
+        "addressRegion": "Kerala",
+        "postalCode": "682016",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 9.9723,
+        "longitude": 76.2828
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "parentOrganization": {
+        "@id": "https://www.globalvista.io/#organization"
+      }
+    }
+  ]
+}

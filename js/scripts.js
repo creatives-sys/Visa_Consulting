@@ -360,35 +360,71 @@
     Contact form validator
     -------------------------------------*/
     if ( $.isFunction($.fn.validate) ) {
-		$("#contact-form").validate(); 
+		$(".contact-form").each(function() {
+			$(this).validate();
+		});
 	} 
   
 	/*-------------------------------------
 	Send email via Ajax
 	Make sure you configure send.php file 
 	-------------------------------------*/
-	$("#contact-form").submit(function(){
+	// Centrally configured Formspree ID.
+	// Change this value to your actual Formspree ID (e.g. "xpzvobyd")
+	// to update it across all forms on the website instantly.
+	var defaultFormspreeId = "xpqnbpqj";
 
-		if( $("#contact-form .doing-via-ajax").length == 0 ){
-			$("#contact-form").prepend('<input class="doing-via-ajax" type="hidden" name="doing-via-ajax" value="yes" />');;
+	$(".contact-form").submit(function(){
+		var form = $(this);
+
+		if( form.find(".doing-via-ajax").length == 0 ){
+			form.prepend('<input class="doing-via-ajax" type="hidden" name="doing-via-ajax" value="yes" />');
 		}
 	
-		if( $("#contact-form").valid() ){  // check if form is valid
+		if( !$.isFunction(form.valid) || form.valid() ){  // check if form is valid
 	
-			$(".contact-form .message-status").html('');
-			$('.form-btn-loader').removeClass('d-none');
-			$('.contact-form button.pbmit-btn span:not(.form-btn-loader)').hide();
-			$('.contact-form button.pbmit-btn').attr("disabled", "disabled");	
-			$.ajax( {
-			type: "POST",
-			url: "send-dummy.php",
-			data:$('#contact-form').serialize(),
-			success: function(cevap) {					
-				$('.form-btn-loader').addClass('d-none');
-				$('.contact-form button.pbmit-btn span').show();
-				$(".contact-form button.pbmit-btn").removeAttr("disabled");
-				$(".contact-form .message-status").html(cevap);
+			form.find(".message-status").html('');
+			form.find('.form-btn-loader').removeClass('d-none');
+			form.find('button.pbmit-btn span:not(.form-btn-loader)').hide();
+			form.find('button.pbmit-btn').attr("disabled", "disabled");	
+			
+			var url = form.attr('action') || "send-mail.php";
+			
+			// Centrally replace placeholder ID with configured ID if needed
+			if (url.indexOf("YOUR_FORM_ID") !== -1 && defaultFormspreeId !== "YOUR_FORM_ID") {
+				url = "https://formspree.io/f/" + defaultFormspreeId;
 			}
+
+			var isFormspree = url.indexOf("formspree.io") !== -1;
+
+			$.ajax( {
+				type: "POST",
+				url: url,
+				data: form.serialize(),
+				dataType: isFormspree ? "json" : "text",
+				headers: isFormspree ? { 'Accept': 'application/json' } : {},
+				success: function(cevap) {					
+					form.find('.form-btn-loader').addClass('d-none');
+					form.find('button.pbmit-btn span').show();
+					form.find("button.pbmit-btn").removeAttr("disabled");
+					
+					if (isFormspree) {
+						if (cevap && cevap.ok) {
+							form.find(".message-status").html('<div class="alert alert-success mt-3" style="color: #155724; background-color: #d4edda; border-color: #c3e6cb; padding: 12px; border-radius: 4px;">Thank you! Your message has been sent successfully.</div>');
+							form[0].reset();
+						} else {
+							form.find(".message-status").html('<div class="alert alert-danger mt-3" style="color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; padding: 12px; border-radius: 4px;">Oops! There was a problem submitting your form.</div>');
+						}
+					} else {
+						form.find(".message-status").html(cevap);
+					}
+				},
+				error: function() {
+					form.find('.form-btn-loader').addClass('d-none');
+					form.find('button.pbmit-btn span').show();
+					form.find("button.pbmit-btn").removeAttr("disabled");
+					form.find(".message-status").html('<div class="alert alert-danger mt-3" style="color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; padding: 12px; border-radius: 4px;">Oops! There was a problem submitting your form.</div>');
+				}
 			});			
 		}	
 		return false;

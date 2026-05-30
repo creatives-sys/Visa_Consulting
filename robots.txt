@@ -1,0 +1,30 @@
+# ==================================================
+#           ROBOTS.TXT FOR GLOBALVISTA
+# ==================================================
+# Target Domain: https://www.globalvista.io
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Exclude internal duplicate and demo templates
+Disallow: /index-backup.html
+Disallow: /index-2.html
+Disallow: /index3.html
+Disallow: /homepage-2.html
+Disallow: /homepage-3.html
+Disallow: /services-backup.html
+Disallow: /blog1 copy.html
+
+# Allow Generative Engine Crawlers
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.globalvista.io/sitemap.xml

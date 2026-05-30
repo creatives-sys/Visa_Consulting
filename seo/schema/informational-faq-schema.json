@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the monthly Ausbildung stipend in Germany for 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In 2026, dual vocational training (Ausbildung) stipends in Germany range from €800 to €1,000 per month in the 1st year, €900 to €1,100 in the 2nd year, and €1,000 to €1,300 in the 3rd year. Post-graduation professional salaries typically range between €2,000 and €3,000 per month depending on the field (nursing, IT, hospitality, or automotive)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much blocked account amount is required for a Germany Student Language Course Visa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a Germany Student Language Course Visa (3 to 12 months duration), students must demonstrate financial self-sufficiency by maintaining a blocked account containing a minimum of €11,208 per year, which allows monthly withdrawals to cover living expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the tuition fees and living costs for studying in Austrian public universities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Public university tuition fees in Austria for international students are highly affordable, generally ranging between €700 and €1,500 per semester, along with a student union fee (ÖH-Beitrag) of approximately €20 per semester. Total monthly student living costs in Austria are estimated between €800 and €1,200."
+      }
+    }
+  ]
+}
